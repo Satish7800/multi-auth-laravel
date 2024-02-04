@@ -18,6 +18,12 @@ class HomeController extends Controller
     }
 
     public function addUser(Request $request){
+
+        $this->validate($request,[
+            'name'=>'required|max:20',
+            'email' => 'required|email|unique:users',
+            'password'=>'required'
+         ]);
         $data=new User;
         $data->name=$request->name;
         $data->email=$request->email;
