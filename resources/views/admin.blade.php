@@ -5,10 +5,10 @@
         <div class="max-w-7xl col-5 mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             @if ($errors->any())
-     @foreach ($errors->all() as $error)
-         <div>{{$error}}</div>
-     @endforeach
- @endif
+                    @foreach ($errors->all() as $error)
+                        <div>{{$error}}</div>
+                    @endforeach
+                @endif
                 <form method="POST" action="{{url('addUser')}}">
                     @csrf
                 <div class="card ">
