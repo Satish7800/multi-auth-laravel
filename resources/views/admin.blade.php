@@ -27,6 +27,14 @@
                                 <input class="form-control" type="password" name="password">
                             </div>
                             <div class="form-group">
+                                <label>User Type</label>
+                                <select class="form-control" name="role" id="">
+                                    <option value="">Select User Type</option>
+                                    <option value="1">Admin</option>
+                                    <option value="0">User</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                <button class="btn btn-primary sm" type="submit">Register</button>
                             </div>
                     </div>

@@ -22,13 +22,14 @@ class HomeController extends Controller
         $this->validate($request,[
             'name'=>'required|max:20',
             'email' => 'required|email|unique:users',
-            'password'=>'required'
+            'password'=>'required',
+            'role'=>'required'
          ]);
         $data=new User;
         $data->name=$request->name;
         $data->email=$request->email;
         $data->password=bcrypt($request->password);
-        $data->role='0';
+        $data->role=$request->role;
         $data->save();
         return redirect()->back()->with('message','User Added Successfully');
     }
